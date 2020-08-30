@@ -5,7 +5,7 @@ import tweets from "./tweets.json";
 
 import "./styles.css";
 
-const tweet = tweets[0];
+//const tweet = tweets[0];
 
 function Tweet(props) {
   return (
@@ -26,33 +26,33 @@ function Tweet(props) {
   );
 }
 
-ReactDOM.render(
-  <Tweet
-    name={tweet.name}
-    avatar={tweet.avatar}
-    content={tweet.content}
-    date={tweet.date}
-    id={tweet.id}
-  />,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <Tweet
+//     name={tweet.name}
+//     avatar={tweet.avatar}
+//     content={tweet.content}
+//     date={tweet.date}
+//     id={tweet.id}
+//   />,
+//   document.getElementById("root")
+// );
 
-// function TweetList(props) {
-//   console.log(props);
-//   const tweets = props.tweets.map((tweet) => {
-//     return (
-//       <li key={tweet.id.toString()}>
-//         <Tweet
-//           name={tweet.name}
-//           avatar={tweet.avatar}
-//           content={tweet.content}
-//           date={tweet.date}
-//           id={tweet.id}
-//         />
-//       </li>
-//     );
-//   });
-//   return tweets;
-// }
+function TweetList(props) {
+  console.log(props);
+  const tweets = props.tweets.map((tweet) => {
+    return (
+      //<li key={tweet.id.toString()}>
+      <Tweet
+        name={tweet.name}
+        avatar={tweet.avatar}
+        content={tweet.content}
+        date={tweet.date}
+        id={tweet.id}
+      />
+      //</li>
+    );
+  });
+  return tweets;
+}
 
-// ReactDOM.render(<TweetList tweets={tweets} />, document.getElementById("root"));
+ReactDOM.render(<TweetList tweets={tweets} />, document.getElementById("root"));
