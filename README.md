@@ -1,2 +1,2 @@
-# tweeter-react-codesandbox
+# Tweeter_React
 Created with CodeSandbox
