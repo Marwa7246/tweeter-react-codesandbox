@@ -41,15 +41,15 @@ function TweetList(props) {
   console.log(props);
   const tweets = props.tweets.map((tweet) => {
     return (
-      //<li key={tweet.id.toString()}>
-      <Tweet
-        name={tweet.name}
-        avatar={tweet.avatar}
-        content={tweet.content}
-        date={tweet.date}
-        id={tweet.id}
-      />
-      //</li>
+      <li key={tweet.id.toString()}>
+        <Tweet
+          name={tweet.name}
+          avatar={tweet.avatar}
+          content={tweet.content}
+          date={tweet.date}
+          id={tweet.id}
+        />
+      </li>
     );
   });
   return tweets;
